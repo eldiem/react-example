@@ -1,7 +1,7 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({ value, onChange, onCreate, onKeyPress }) => {
+const Form = ({ value, onChange, onCreate, onKeyPress, color }) => {
   // value: input 내용
   // onCreate: 버튼이 클릭될 때 실행 될 함수
   // onChange: input 내용이 변경될 때 실행 될 함수
@@ -9,7 +9,7 @@ const Form = ({ value, onChange, onCreate, onKeyPress }) => {
   
   return (
     <div className="form">
-      <input value={value} onChange= {onChange} onKeyPress= {onKeyPress} />
+      <input value={value} onChange= {onChange} onKeyPress= {onKeyPress} style={{color}}/>
       <div className="create-button" onClick={onCreate}>
         추가
       </div>

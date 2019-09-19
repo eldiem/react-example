@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem';
 
 class TodoItemList extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.todos !== nextProps.todos;
+  }
   render() {
     const { todos, onToggle, onRemove } = this.props;
     // todos: todo 객체들이 들어있는 배열
